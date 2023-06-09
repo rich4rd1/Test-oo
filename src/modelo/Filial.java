@@ -1,4 +1,5 @@
 package modelo;
+
 import java.util.ArrayList;
 
 public class Filial {
@@ -6,11 +7,17 @@ public class Filial {
     private String cnpj;
     private String endereco;
     private ArrayList<ItemPatrimonio> patrimonio = new ArrayList<ItemPatrimonio>();
+    private int numeroFilial;
 
-    public Filial(String nome, String cnpj, String endereco, ArrayList<ItemPatrimonio> patrimonio) {
+    public Filial(String nome, String cnpj, String endereco, int numeroFilial) {
         this.nome = nome;
         this.cnpj = cnpj;
         this.endereco = endereco;
+        this.numeroFilial = numeroFilial;
+
+    }
+
+    public Filial(ArrayList<ItemPatrimonio> patrimonio) {
         this.patrimonio = patrimonio;
     }
 
@@ -46,8 +53,16 @@ public class Filial {
         this.patrimonio = patrimonio;
     }
 
-    public String toString() {
-        return "\nNOME FILIAL: " + nome + "\nCNPJ: " + cnpj + "\nENDERECO: " + endereco + "\n";
+    public void setrNumeroFilial(int numeroFilial) {
+        this.numeroFilial = numeroFilial;
     }
 
+    public int getNumeroFilial() {
+        return numeroFilial;
+    }
+
+    public String toString() {
+        return "\nNOME FILIAL: " + nome + "\nCNPJ: " + cnpj + "\nENDERECO: " + endereco + "\nNUMERO FILIAL: "
+                + numeroFilial + "\nPATRIMONIO: " + getPatrimonio();
+    }
 }
