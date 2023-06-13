@@ -21,24 +21,27 @@ public class Main {
 
                 Veiculo v = new Veiculo("TRATOR-ESCAVADEIRA", 1, 500000, "CAT", "PESADO", "AMARELO", 2, 1);
 
-                Veiculo v2 = new Veiculo("CAMINHAO-TRANSPORTE", 1, 100000, 
-                "VOLVO", "PESADO", "PRETO", 2, 1);
+                Veiculo v2 = new Veiculo("CAMINHAO-TRANSPORTE", 1, 100000,
+                                "VOLVO", "PESADO", "PRETO", 2, 1);
 
                 Dados d = new Dados();
-                d.cadastarEqConstrucao(eqc);
-                d.cadastarEqEletronico(eqe);
-                d.cadastarFilial(f);
+                d.cadastrarEqConstrucao(eqc);
+                d.cadastrarEqEletronico(eqe);
                 d.cadastrarVeiculo(v);
-                d.vinculaPatrimonio(f, v);
-                d.vinculaPatrimonio(f, v2);
+                d.cadastrarVeiculo(v2);
+                d.cadastrarFilial(f);
+                d.vincularPatrimonioVeiculo(f, v);
+                d.vincularPatrimonioVeiculo(f, v2);
+                d.vincularPatrimonioConstrucao(f, eqc);
+                d.vincularPatrimonioEquipEletronico(f, eqe);
+                d.adicionarTodosPatrimonios();
                 
-                System.out.println(d.getFilial());
-                System.out.println("-----------------------------------------------------------------");
-                System.out.println(d.getEqConstrucao());
-                System.out.println("-----------------------------------------------------------------");
-                System.out.println(d.getEqEletronico());
-                System.out.println("-----------------------------------------------------------------");
-                System.out.println(d.getVeiculo());
-        }
 
+                System.out.println(d.getFiliais());
+                System.out.println("----------------------------------------------------");           
+                System.out.println(d.getPatrimonios());
+ 
+                    
+                
+        }
 }

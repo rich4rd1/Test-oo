@@ -75,9 +75,9 @@ public class EquipamentoEletronico extends ItemPatrimonio {
 
 	@Override
 	public String toString() {
-		return "NOME PATRIMONIO: " + nomeItem + "\nQUANTIDADE: " + quantidade + "\nVALOR: " + valor + "\nMARCA: "
+		return "\nNOME PATRIMONIO: " + nomeItem + "\nQUANTIDADE: " + quantidade + "\nVALOR: " + valor + "\nMARCA: "
 				+ marca + "\nPESO: " + pesoEquipamento + "\nVOLTAGEM: " + voltagem + "\nSISTEMA: " + sistema
-				+ "\nMODELO: " + modelo + "\nCODIGO: " + codigo;
+				+ "\nMODELO: " + modelo + "\nCODIGO: " + codigo + "\n";
 	}
 
 }

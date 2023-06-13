@@ -62,6 +62,6 @@ public class Filial {
 	}
 
     public String toString() {
-        return "\nNOME FILIAL: " + nome + "\nCNPJ: " + cnpj + "\nENDERECO: " + endereco + "\nPATRIMONIO: " + "\nCODIGO: " + codigo +"\n" + getPatrimonio();
+        return "\nNOME FILIAL: " + nome + "\nCNPJ: " + cnpj + "\nENDERECO: " + endereco + "\nPATRIMONIO: " + "\nCODIGO: " + codigo +"\n" + getPatrimonio() + "\n";
     }
 }

@@ -19,6 +19,7 @@ public class Veiculo extends ItemPatrimonio {
 		this.cor = cor;
 		this.qtdPortas = qtdPortas;
 		this.codigo = codigo;
+		this.marca = marca;
 	}
 
 	public String getTipoVeiculo() {

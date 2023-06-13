@@ -56,7 +56,7 @@ public class EquipamentoConstrucao extends ItemPatrimonio {
 
 	@Override
 	public String toString() {
-		return "NOME PATRIMONIO: "+  nomeItem + "\nQUANTIDADE: " + quantidade + "\nVALOR: "+ valor +"\nMARCA: " + marca + "\nPESO: " + pesoEquipamento + "\nANO FABRICACAO: " + anoFabricacao + "\nMATERIAL: "+ material+ "\nCODIGO: " + codigo;
+		return "NOME PATRIMONIO: "+  nomeItem + "\nQUANTIDADE: " + quantidade + "\nVALOR: "+ valor +"\nMARCA: " + marca + "\nPESO: " + pesoEquipamento + "\nANO FABRICACAO: " + anoFabricacao + "\nMATERIAL: "+ material+ "\nCODIGO: " + codigo + "\n";
 	}
 
 }
