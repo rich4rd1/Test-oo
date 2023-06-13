@@ -6,19 +6,19 @@ public class Filial {
     private String nome;
     private String cnpj;
     private String endereco;
-    private ArrayList<ItemPatrimonio> patrimonio = new ArrayList<ItemPatrimonio>();
-    private int numeroFilial;
+    ArrayList<String> patrimonioFilial = new ArrayList<String>();
+    private int codigo;
+    
 
-    public Filial(String nome, String cnpj, String endereco, int numeroFilial) {
+    public Filial(String nome, String cnpj, String endereco, int numeroFilial, int codigo ) {
         this.nome = nome;
         this.cnpj = cnpj;
         this.endereco = endereco;
-        this.numeroFilial = numeroFilial;
-
+        this.codigo = codigo;
     }
 
-    public Filial(ArrayList<ItemPatrimonio> patrimonio) {
-        this.patrimonio = patrimonio;
+    public ArrayList<String> patrimonioFilial(){
+        return patrimonioFilial;
     }
 
     public String getNome() {
@@ -45,15 +45,23 @@ public class Filial {
         this.endereco = endereco;
     }
 
-    public ArrayList<ItemPatrimonio> getPatrimonio() {
-        return patrimonio;
+    public ArrayList<String> getPatrimonio() {
+        return patrimonioFilial;
     }
 
-    public void setPatrimonio(ArrayList<ItemPatrimonio> patrimonio) {
-        this.patrimonio = patrimonio;
+    public void setPatrimonio(ArrayList<String> patrimonio) {
+        this.patrimonioFilial = patrimonio;
     }
+
+    public void setCodigoFilial(int numero){
+		this.codigo = numero;
+	}
+
+	public int getCodigoFilial(){
+		return codigo;
+	}
 
     public String toString() {
-        return "\nNOME FILIAL: " + nome + "\nCNPJ: " + cnpj + "\nENDERECO: " + endereco + "\nPATRIMONIO: " + getPatrimonio();
+        return "\nNOME FILIAL: " + nome + "\nCNPJ: " + cnpj + "\nENDERECO: " + endereco + "\nPATRIMONIO: " + "\nCODIGO: " + codigo +"\n" + getPatrimonio();
     }
 }

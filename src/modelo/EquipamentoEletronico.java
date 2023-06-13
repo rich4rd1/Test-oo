@@ -6,13 +6,14 @@ public class EquipamentoEletronico extends ItemPatrimonio {
 	private String sistema;
 	private String modelo;
 	private String marca;
-	private int filialVinculadaE;
+	private int codigo;
+
 	public EquipamentoEletronico() {
 		super();
 	}
 
 	public EquipamentoEletronico(String nomeItem, int quantidade, double valor, String marca, double pesoEquipamento,
-			int voltagem, String sistema, String modelo, int filialVinculada) {
+			int voltagem, String sistema, String modelo, int codigo) {
 		this.nomeItem = nomeItem;
 		this.quantidade = quantidade;
 		this.valor = valor;
@@ -21,7 +22,7 @@ public class EquipamentoEletronico extends ItemPatrimonio {
 		this.sistema = sistema;
 		this.modelo = modelo;
 		this.marca = marca;
-		this.filialVinculadaE = filialVinculada;
+		this.codigo = codigo;
 	}
 
 	public double getPesoEquipamento() {
@@ -56,26 +57,27 @@ public class EquipamentoEletronico extends ItemPatrimonio {
 		this.modelo = modelo;
 	}
 
-	public void setMarca(String marca){
+	public void setMarca(String marca) {
 		this.marca = marca;
 	}
-	public String getMarca(){
+
+	public String getMarca() {
 		return marca;
 	}
 
-	public void setFilialVinculadaE(int numeroFilial){
-		this.filialVinculadaE = numeroFilial;
+	public void setCodigoEletronico(int numero) {
+		this.codigo = numero;
 	}
 
-	public int getFilialVinculadaE(){
-		return filialVinculadaE;
+	public int getCodigoEletronico() {
+		return codigo;
 	}
-
 
 	@Override
 	public String toString() {
-		return "NOME PATRIMONIO: "+  nomeItem + "\nQUANTIDADE: " + quantidade + "\nVALOR: "+ valor +"\nMARCA: " + marca + "\nPESO: " + pesoEquipamento + "\nVOLTAGEM: " + voltagem + "\nSISTEMA: " + sistema
-				+ "\nMODELO: " + modelo + "\n";
+		return "NOME PATRIMONIO: " + nomeItem + "\nQUANTIDADE: " + quantidade + "\nVALOR: " + valor + "\nMARCA: "
+				+ marca + "\nPESO: " + pesoEquipamento + "\nVOLTAGEM: " + voltagem + "\nSISTEMA: " + sistema
+				+ "\nMODELO: " + modelo + "\nCODIGO: " + codigo;
 	}
 
 }

@@ -1,5 +1,4 @@
 package modelo;
-
 import java.util.*;
 
 public class Dados {
@@ -7,6 +6,7 @@ public class Dados {
     private ArrayList<EquipamentoEletronico> EqEletronico = new ArrayList<>();
     private ArrayList<Filial> Filiais = new ArrayList<>();
     private ArrayList<Veiculo> Veiculo = new ArrayList<>();
+    private ArrayList<Veiculo> patrimonios = new ArrayList<>();
 
     // BLOCO DE EQUIPAMENTO
     // DE CONSTRUCAO ----------------------------------------------
@@ -63,6 +63,16 @@ public class Dados {
         return Filiais.get(posicao);
     }
 
+    public  ArrayList<String> vinculaPatrimonio(Filial filial, Veiculo veiculo) {
+        int cf = veiculo.getCodigoVeiculo();
+        int cv = filial.getCodigoFilial();
+        String veiculoFilial = veiculo.toString();
+        if(cv == cf){
+           filial.patrimonioFilial.add(veiculoFilial);
+        }
+        return filial.patrimonioFilial;
+    }
+
     // BLOCO DE VEICULO
     // ----------------------------------------------------------
     public void cadastrarVeiculo(Veiculo veiculo) {
@@ -73,11 +83,11 @@ public class Dados {
         return Veiculo;
     }
 
-    public void removeVeiculo(int posicao){
+    public void removeVeiculo(int posicao) {
         this.Veiculo.remove(posicao);
     }
 
-    public Veiculo listarVeivulo(int posicao){
+    public Veiculo listarVeivulo(int posicao) {
         return Veiculo.get(posicao);
     }
 }

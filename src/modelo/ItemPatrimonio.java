@@ -39,8 +39,7 @@ public abstract class ItemPatrimonio {
     }
 
     public String toString() {
-        return "NOME PATRIMONIO: " + nomeItem + "\nQUANTIDADE: " + quantidade + "\nVALOR: " + valor + "\nMARCA: "
-                + marca + "\n";
+        return "NOME PATRIMONIO: " + nomeItem + "\nQUANTIDADE: " + quantidade + "\nVALOR: " + valor + "\nMARCA: "+ marca + "\n";
     }
 
 }
