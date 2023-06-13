@@ -46,17 +46,9 @@ public class EquipamentoConstrucao extends ItemPatrimonio {
 		this.material = material;
 	}
 
-	public void setFilialVinculadaC(int numeroFilial){
-		this.filialVinculadaC = numeroFilial;
-	}
-
-	public int getFilailVinculadaC(){
-		return filialVinculadaC;
-	}
 	@Override
 	public String toString() {
-		return "NOME PATRIMONIO: "+  nomeItem + "\nQUANTIDADE: " + quantidade + "\nVALOR: "+ valor +"\nMARCA: " + marca + "\nPESO: " + pesoEquipamento + "\nANO FABRICACAO: " + anoFabricacao + "\nMATERIAL: "+ material+
-		"\nFILIAL VINCULADA: "+  filialVinculadaC + "\n";
+		return "NOME PATRIMONIO: "+  nomeItem + "\nQUANTIDADE: " + quantidade + "\nVALOR: "+ valor +"\nMARCA: " + marca + "\nPESO: " + pesoEquipamento + "\nANO FABRICACAO: " + anoFabricacao + "\nMATERIAL: "+ material+ "\n";
 	}
 
 }

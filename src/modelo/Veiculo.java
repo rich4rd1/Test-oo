@@ -45,8 +45,7 @@ public class Veiculo extends ItemPatrimonio {
 
 	@Override
 	public String toString() {
-		return super.toString() + "TIPO: " + tipoVeiculo + "\nCOR: " + cor
-				+ "\nQUANTIDADE DE PORTAS: " + qtdPortas + "\n";
+		return super.toString() + "TIPO: " + tipoVeiculo + "\nCOR: " + cor + "\nQUANTIDADE DE PORTAS: " + qtdPortas + "\n";
 	}
 
 }

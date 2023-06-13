@@ -53,16 +53,7 @@ public class Filial {
         this.patrimonio = patrimonio;
     }
 
-    public void setrNumeroFilial(int numeroFilial) {
-        this.numeroFilial = numeroFilial;
-    }
-
-    public int getNumeroFilial() {
-        return numeroFilial;
-    }
-
     public String toString() {
-        return "\nNOME FILIAL: " + nome + "\nCNPJ: " + cnpj + "\nENDERECO: " + endereco + "\nNUMERO FILIAL: "
-                + numeroFilial + "\nPATRIMONIO: " + getPatrimonio();
+        return "\nNOME FILIAL: " + nome + "\nCNPJ: " + cnpj + "\nENDERECO: " + endereco + "\nPATRIMONIO: " + getPatrimonio();
     }
 }

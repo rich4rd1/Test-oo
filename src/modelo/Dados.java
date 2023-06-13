@@ -6,10 +6,10 @@ public class Dados {
     private ArrayList<EquipamentoConstrucao> EqConstrucao = new ArrayList<>();
     private ArrayList<EquipamentoEletronico> EqEletronico = new ArrayList<>();
     private ArrayList<Filial> Filiais = new ArrayList<>();
-    private ArrayList<ItemPatrimonio> Patrimonio = new ArrayList<>();
     private ArrayList<Veiculo> Veiculo = new ArrayList<>();
 
-    // BLOCO DE EQUIPAMENTO DE CONSTRUCAO ------------------------------------------
+    // BLOCO DE EQUIPAMENTO
+    // DE CONSTRUCAO ----------------------------------------------
     public void cadastarEqConstrucao(EquipamentoConstrucao eqpc) {
         this.EqConstrucao.add(eqpc);
     }
@@ -27,7 +27,7 @@ public class Dados {
     }
 
     // BLOCO DE EQUIPAMENTO
-    // ELETRONICO-----------------------------------------------
+    // ELETRONICO-------------------------------------------------
 
     public void cadastarEqEletronico(EquipamentoEletronico eqpe) {
         this.EqEletronico.add(eqpe);
@@ -45,7 +45,7 @@ public class Dados {
         this.EqEletronico.remove(posicao);
     }
     // BLOCO DE FILIAL
-    // --------------------------------------------------------------
+    // ---------------------------------------------------------
 
     public void cadastarFilial(Filial filial) {
         this.Filiais.add(filial);
@@ -63,4 +63,21 @@ public class Dados {
         return Filiais.get(posicao);
     }
 
+    // BLOCO DE VEICULO
+    // ----------------------------------------------------------
+    public void cadastrarVeiculo(Veiculo veiculo) {
+        this.Veiculo.add(veiculo);
+    }
+
+    public ArrayList<Veiculo> getVeiculo() {
+        return Veiculo;
+    }
+
+    public void removeVeiculo(int posicao){
+        this.Veiculo.remove(posicao);
+    }
+
+    public Veiculo listarVeivulo(int posicao){
+        return Veiculo.get(posicao);
+    }
 }
